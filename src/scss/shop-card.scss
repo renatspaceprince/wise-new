@@ -8,12 +8,10 @@
 }
 
 .shop__gallery-card-img {
-  width: 259px;
   height: 343px;
   object-fit: cover;
 
   @media (max-width: 767px) {
-    height: 100%;
     width: 100%;
   }
 }
@@ -22,8 +20,8 @@
   color: black;
 
   @media (max-width: 767px) {
+    padding-left: 5px;
     font-size: 10px;
-    max-width: 100%;
   }
 }
 
@@ -31,5 +29,6 @@
   color: black;
   @media (max-width: 767px) {
     font-size: 12px;
+    padding-left: 5px;
   }
 }

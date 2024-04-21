@@ -9,14 +9,12 @@
 }
 
 .shop__gallery-card-img {
-  width: 259px;
   height: 343px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (max-width: 767px) {
   .shop__gallery-card-img {
-    height: 100%;
     width: 100%;
   }
 }
@@ -26,8 +24,8 @@
 }
 @media (max-width: 767px) {
   .shop__gallery-card-name {
+    padding-left: 5px;
     font-size: 10px;
-    max-width: 100%;
   }
 }
 
@@ -37,5 +35,6 @@
 @media (max-width: 767px) {
   .shop__gallery-card-price {
     font-size: 12px;
+    padding-left: 5px;
   }
 }

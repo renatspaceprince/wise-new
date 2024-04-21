@@ -24,7 +24,7 @@ function addShopCard() {
       render() {
         this.shadowRoot.innerHTML = `
               <style>
-                @import url('../css/shop-card.css');
+                @import url('../../css/shop-card.css');
               </style>
               <img
                 src="${this.getAttribute('image') || ''}"
@@ -34,6 +34,7 @@ function addShopCard() {
               <span class="shop__gallery-card-name">
                 ${this.getAttribute('name') || ''}
               </span>
+              <br/>
               <span class="shop__gallery-card-price">
                 ${this.getAttribute('price') || ''}
               </span>
