@@ -1,0 +1,90 @@
+.shop-nav {
+  min-width: 200px;
+  padding-top: 100px;
+
+  @include mobile {
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    padding: 0 0 0 40px;
+    position: fixed;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 130px;
+
+    @include mobile {
+      z-index: 1;
+      top: 15px;
+      left: 10px;
+      display: none;
+    }
+  }
+
+  &__sub {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  &__sub-wrapper {
+    padding: 8px 0 4px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include mobile {
+    height: 100vh;
+    justify-content: center;
+  }
+
+  &__parent-btn {
+    height: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__parent-btn-all {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 5px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__parent-btn__icon {
+    transition: all 0.2s ease-in;
+  }
+  .active &__parent-btn__icon {
+    transform: rotate(-180deg);
+  }
+
+  &__link {
+    &:hover {
+      color: $orange;
+    }
+  }
+}

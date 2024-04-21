@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin bg {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin w1250 {
+  @media only screen and (max-width: 1250px) {
+    @content;
+  }
+}
+
+@mixin w900 {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin w550 {
+  @media only screen and (max-width: 550px) {
+    @content;
+  }
+}
+
+html,
+body {
+  font-family: $font-main;
+  color: $text-color;
+}
+
+a {
+  color: $text-color;
+}
+
+.container {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+  max-width: 1785px;
+
+  margin: 0 auto;
+}
+
+.none-mobile {
+  @include mobile {
+    display: none;
+  }
+}

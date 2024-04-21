@@ -1,0 +1,72 @@
+.market {
+  height: 620px;
+  min-height: 620px;
+  width: 100%;
+
+  background-color: $black;
+
+  @include mobile {
+    height: 100%;
+  }
+
+  &__card-holder {
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__card {
+    height: 580px;
+    width: 500px;
+    position: relative;
+
+    overflow: hidden;
+
+    @include mobile {
+      height: 200px;
+      width: 100%;
+    }
+  }
+
+  &__card-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    width: 480px;
+
+    pointer-events: none;
+
+    @include mobile {
+      width: 300px;
+    }
+  }
+
+  &__card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    order: 1;
+
+    filter: grayscale(100%);
+    transition: filter 0.25s, transform 0.3s ease-in-out;
+
+    &:hover {
+      filter: none;
+      transform: scale(1.1);
+    }
+  }
+
+  // &__card-img:hover {
+  //   filter: none;
+  // }
+}

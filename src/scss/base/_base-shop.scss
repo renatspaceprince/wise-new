@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin bg {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin w1250 {
+  @media only screen and (max-width: 1250px) {
+    @content;
+  }
+}
+
+@mixin w900 {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin w550 {
+  @media only screen and (max-width: 550px) {
+    @content;
+  }
+}
+
+html,
+body {
+  font-family: $font-main;
+  color: black;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  color: black;
+}
+
+.container {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+  max-width: 1785px;
+
+  margin: 0 auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: white;
+
+  display: none;
+
+  &__wrapper {
+    height: 100vh;
+    padding: 20px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      padding: 10px 20px;
+    }
+  }
+}

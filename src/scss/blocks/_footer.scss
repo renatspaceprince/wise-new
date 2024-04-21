@@ -1,0 +1,48 @@
+.footer {
+  background-color: $footer-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+
+  @include mobile {
+    font-size: 9px;
+    padding: 20px 10px 13px 10px;
+  }
+
+  &__list-item {
+    padding-bottom: 10px;
+    @include mobile {
+      padding-bottom: 7px;
+    }
+  }
+
+  &__list-title {
+    color: black;
+  }
+
+  &__list-text {
+    color: black;
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  &__center-links {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  &__center-link-img {
+    height: 20px;
+  }
+
+  &__rigth-list {
+    text-align: right;
+  }
+}

@@ -1,0 +1,426 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  color: black;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 1785px;
+  margin: 0 auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: none;
+}
+.modal__wrapper {
+  height: 100vh;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .modal__wrapper {
+    padding: 10px 20px;
+  }
+}
+
+.icon--arrow-down {
+  width: 10px;
+  height: 20px;
+}
+
+.icon {
+  height: 30px;
+}
+
+.icon--burger-logo {
+  width: 23px;
+}
+
+.icon--home {
+  width: 23px;
+}
+
+.shop {
+  color: black;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  gap: 50px;
+  padding: 20px 50px;
+  font-size: 14px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 767px) {
+  .shop {
+    padding: 0;
+  }
+}
+.shop__gallery {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .shop__gallery {
+    width: 100%;
+  }
+}
+.shop__gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  gap: 20px;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .shop__gallery-wrapper {
+    grid-template-columns: repeat(2, 170px);
+    grid-auto-rows: 280px;
+    gap: 10px;
+    padding-top: 35px;
+  }
+}
+
+.modal {
+  z-index: 999;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 767px) {
+  .nav {
+    padding: 15px 5px 0 0;
+  }
+}
+.nav__back {
+  height: 30px;
+  width: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .nav__back {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.product {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .product {
+    gap: 10px;
+    padding-top: 0;
+  }
+}
+.product__slider {
+  width: 400px;
+}
+@media only screen and (max-width: 767px) {
+  .product__slider {
+    width: 280px;
+  }
+}
+.product__list {
+  display: grid;
+  gap: 5px;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .product__list {
+    gap: 5px;
+  }
+}
+.product__list-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+@media only screen and (max-width: 767px) {
+  .product__list-title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+.product__list-price {
+  font-weight: 300;
+}
+@media only screen and (max-width: 767px) {
+  .product__list-price {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
+.product__list-size {
+  font-weight: 300;
+}
+@media only screen and (max-width: 767px) {
+  .product__list-size {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
+.product__sell {
+  padding: 10px 30px;
+  background-color: #111;
+  color: white;
+}
+.product__sell:active, .product__sell:hover {
+  background-color: #ff7c03;
+  color: #111;
+}
+@media only screen and (max-width: 767px) {
+  .product__sell {
+    padding: 6px 16px;
+    font-size: 15px;
+  }
+}
+
+.shop-nav {
+  min-width: 200px;
+  padding-top: 100px;
+}
+@media only screen and (max-width: 767px) {
+  .shop-nav {
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    padding: 0 0 0 40px;
+    position: fixed;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+  }
+}
+.shop-nav__logo {
+  position: absolute;
+  width: 130px;
+}
+@media only screen and (max-width: 767px) {
+  .shop-nav__logo {
+    z-index: 1;
+    top: 15px;
+    left: 10px;
+    display: none;
+  }
+}
+.shop-nav__sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.shop-nav__sub-wrapper {
+  padding: 8px 0 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media only screen and (max-width: 767px) {
+  .nav-links {
+    height: 100vh;
+    justify-content: center;
+  }
+}
+.nav-links__parent-btn {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+}
+.nav-links__parent-btn:hover {
+  color: #ff7c03;
+}
+.nav-links__parent-btn-all {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.nav-links__parent-btn-all:hover {
+  color: #ff7c03;
+}
+.nav-links__parent-btn__icon {
+  transition: all 0.2s ease-in;
+}
+.active .nav-links__parent-btn__icon {
+  transform: rotate(-180deg);
+}
+.nav-links__link:hover {
+  color: #ff7c03;
+}
+
+.shop-header {
+  background-color: #fff;
+  position: fixed;
+  z-index: 2;
+  display: none;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+@media only screen and (max-width: 767px) {
+  .shop-header {
+    display: block;
+  }
+}
+.shop-header__wrapper {
+  height: 100%;
+  padding: 0 25px;
+}
+
+.header__nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav-item {
+  height: 30px;
+}
+.header__nav-btn:active {
+  fill: #ff7c03;
+}

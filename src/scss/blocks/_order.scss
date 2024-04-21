@@ -1,0 +1,91 @@
+.order {
+  background-color: $black;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 70px 0;
+  }
+
+  &__card-holder {
+    display: flex;
+    gap: 30px;
+
+    @include mobile {
+      // width: 350px;
+      gap: 10px;
+    }
+  }
+
+  &__card-title {
+    font-size: 30px;
+    text-transform: uppercase;
+
+    text-align: center;
+  }
+
+  &__card-list {
+    overflow: auto;
+
+    border: 1px solid white;
+    height: 500px;
+    width: 350px;
+
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+
+    @include mobile {
+      gap: 10px;
+      height: 400px;
+      width: 180px;
+    }
+  }
+
+  &__card-title {
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 14px;
+
+    color: #929292;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__card-item {
+    height: 140px;
+    width: 130px;
+
+    @include mobile {
+      height: 130px;
+      width: 120px;
+    }
+  }
+
+  &__card-btn {
+    width: 200px;
+    margin-top: 60px;
+
+    background-color: $orange;
+    padding: 10px 30px;
+    font-size: 16px;
+
+    @include mobile {
+      width: 130px;
+      margin-top: 40px;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+.none-mobile {
+  @include mobile {
+    display: none;
+  }
+}

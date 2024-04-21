@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  :host {
+    padding: 0;
+  }
+}
+
+.shop__gallery-card-img {
+  width: 259px;
+  height: 343px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .shop__gallery-card-img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.shop__gallery-card-name {
+  color: black;
+}
+@media (max-width: 767px) {
+  .shop__gallery-card-name {
+    font-size: 10px;
+    max-width: 100%;
+  }
+}
+
+.shop__gallery-card-price {
+  color: black;
+}
+@media (max-width: 767px) {
+  .shop__gallery-card-price {
+    font-size: 12px;
+  }
+}
