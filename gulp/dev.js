@@ -203,7 +203,7 @@ gulp.task('js:dev', function() {
 
 const serverOptions = {
   livereload: true,
-  open: true,
+  open: false,
 }
 
 gulp.task('server:dev', function() {

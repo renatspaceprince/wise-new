@@ -121,20 +121,21 @@ gulp.task('sass:docs', function() {
   )
 })
 
-gulp.task('images:docs', function() {
+gulp.task('webp:docs', function() {
   return gulp
-    .src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
+    .src(['./src/img/**/*.{jpg,jpeg,png}'])
     .pipe(changed('./docs/img/'))
-    .pipe(
-      imagemin([
-        imageminWebp({
-          quality: 85,
-        }),
-      ])
-    )
+    .pipe(imagemin([imageminWebp({ quality: 85 })]))
     .pipe(rename({ extname: '.webp' }))
     .pipe(gulp.dest('./docs/img/'))
-    .pipe(gulp.src('./src/img/**/*'))
+    .pipe(gulp.src('./docs/**/*.html')) // Здесь мы обновляем HTML файлы после конвертации изображений
+    .pipe(replace(/\.jpg|\.jpeg|\.png/g, '.webp')) // Заменяем расширения изображений в ссылках на .webp
+    .pipe(gulp.dest('./docs/')) // Сохраняем обновленные HTML файлы
+})
+
+gulp.task('images:docs', function() {
+  return gulp
+    .src(['./src/img/**/*', '!./src/img/**/*.{svg,jpg,jpeg,png}'])
     .pipe(changed('./docs/img/'))
     .pipe(
       imagemin(
@@ -215,8 +216,8 @@ gulp.task('js:docs', function() {
 })
 
 const serverOptions = {
-  livereload: true,
-  open: true,
+  livereload: false,
+  open: false,
 }
 
 gulp.task('server:docs', function() {
